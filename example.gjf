@@ -1,0 +1,32 @@
+%chk=D:\work\bbs\gau_xtb\TS.chk
+%nprocshared=1
+#p opt=(calcfc,ts,noeigen,nomicro) external='python3 D:\work\bbs\gau_xtb\gau_xtb.py'
+
+Title Card Required
+
+0 1
+ C                 -1.63584300   -0.21808700    0.18089800
+ C                 -0.31253400   -0.78768400   -0.12991700
+ C                 -0.69293200    0.88701800   -0.24226100
+ H                 -2.44474100   -0.49942200   -0.48067100
+ H                 -1.93454100   -0.16341300    1.21850400
+ H                 -0.17138300   -1.46736000   -0.97247900
+ H                 -0.63822800    1.76626700    0.38321600
+ H                 -0.66552900    1.13166600   -1.29982000
+ C                  0.66396300    0.00090100    0.49925300
+ O                  1.89764600   -0.06104200   -0.13643800
+ H                  2.53733300    0.42770600    0.39491700
+
+--link1--
+%oldchk=D:\work\bbs\gau_xtb\TS.chk
+%chk=D:\work\bbs\gau_xtb\freq.chk
+%nproc=1
+#P freq geom=allcheck external='python3 D:\work\bbs\gau_xtb\gau_xtb.py'
+
+--link1--
+%oldchk=D:\work\bbs\gau_xtb\freq.chk
+%chk=D:\work\bbs\gau_xtb\IRC.chk
+%nproc=1
+#P IRC(maxpoints=20,rcfc) geom=allcheck external='python3 D:\work\bbs\gau_xtb\gau_xtb.py'
+
+
