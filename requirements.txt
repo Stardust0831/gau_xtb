@@ -1,0 +1,4 @@
+# Runtime Python dependencies:
+#   none
+#
+# Use Python >= 3.9 and install the external xTB executable separately.
